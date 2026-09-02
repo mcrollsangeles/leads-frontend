@@ -14,9 +14,9 @@ export const publicLeadSchema = z.object({
     phone: z
         .string()
         .trim()
+        .min(1, "Phone is required.")
         .max(40, "Phone number is too long.")
-        .regex(/^[0-9+\-()\s]*$/, "Phone can only contain numbers and + - ( ).")
-        .optional(),
+        .regex(/^[0-9+\-()\s]*$/, "Phone can only contain numbers and + - ( )."),
 });
 
 export type PublicLeadInput = z.infer<typeof publicLeadSchema>;

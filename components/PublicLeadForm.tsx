@@ -85,6 +85,7 @@ export default function PublicLeadForm({ slug }: { slug: string }) {
                     name="phone"
                     type="tel"
                     inputMode="tel"
+                    required
                     placeholder="+1 555 0000"
                     onChange={(e) => {
                         e.target.value = e.target.value.replace(
