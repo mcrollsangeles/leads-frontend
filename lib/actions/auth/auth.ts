@@ -61,7 +61,7 @@ export async function loginAction(
         maxAge: TOKEN_MAX_AGE,
     });
 
-    redirect("/");
+    redirect("/dashboard");
 }
 
 export async function logoutAction() {
