@@ -56,7 +56,7 @@ export async function loginAction(
     cookieStore.set(AUTH_COOKIE, data.token, {
         httpOnly: true,
         sameSite: "lax",
-        secure: process.env.NODE_ENV === "production",
+        secure: false,
         path: "/",
         maxAge: TOKEN_MAX_AGE,
     });
