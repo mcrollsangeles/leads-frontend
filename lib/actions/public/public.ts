@@ -19,9 +19,7 @@ export async function submitPublicLead(
     const raw = {
         name: String(formData.get("name") ?? ""),
         email: String(formData.get("email") ?? ""),
-        phone: formData.get("phone")
-            ? String(formData.get("phone"))
-            : undefined,
+        phone: String(formData.get("phone") ?? ""),
     };
 
     const parsed = publicLeadSchema.safeParse(raw);
